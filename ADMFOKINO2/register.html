@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ШАПКА без меню -->
+    <header>
+        <a href="Index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+    </header>
+
+    <!-- ФОРМА РЕГИСТРАЦИИ -->
+    <main>
+        <section class="auth-container">
+            <h2>Регистрация</h2>
+            <form action="register.php" method="post" class="auth-form">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Подтвердите пароль:</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+
+                <button type="submit">Зарегистрироваться</button>
+                <p class="form-link">
+                    Уже есть аккаунт? <a href="login.html">Войти</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+        <p>Официальный сайт. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

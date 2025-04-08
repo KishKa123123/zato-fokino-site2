@@ -1,0 +1,77 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрация ЗАТО Фокино</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+        <a href="index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li class="dropdown">
+                    <a href="about.php">О муниципальном образовании</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="History.php">История</a></li>
+                        <li><a href="symbol.php">Символика</a></li>
+                        <li><a href="citizens.php">Почётные граждане</a></li>
+                        <li><a href="places.php">Достопримечательности</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.php">Новости</a></li>
+                <li><a href="contacts.php">Контакты</a></li>
+                <li><a href="jobs.php">Каталог Вакансий</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<main class="container">
+    <h2>Каталог Вакансий</h2>
+
+    <div class="job-card">
+        <h3>Ведущий специалист по муниципальной службе</h3>
+        <p><strong>Заработная плата:</strong> 34 000 ₽</p>
+        <p><strong>Место работы:</strong> Администрация ЗАТО г. Фокино</p>
+        <p><strong>Требования:</strong> Высшее образование, опыт работы не менее 2 лет.</p>
+        <p><strong>Контакты:</strong> 8 (42339) 21-1-86, <a href="mailto:hr@fokino.org">hr@fokino.org</a></p>
+    </div>
+
+    <div class="job-card">
+        <h3>Специалист 1 категории отдела документационного обеспечения</h3>
+        <p><strong>Заработная плата:</strong> 29 000 ₽</p>
+        <p><strong>Место работы:</strong> Архивный отдел</p>
+        <p><strong>Требования:</strong> Среднее профессиональное или высшее образование.</p>
+        <p><strong>Контакты:</strong> 8 (42339) 21-2-13, <a href="mailto:doc@fokino.org">doc@fokino.org</a></p>
+    </div>
+
+    <div class="job-card">
+        <h3>Главный специалист-эксперт финансового отдела</h3>
+        <p><strong>Заработная плата:</strong> 37 500 ₽</p>
+        <p><strong>Место работы:</strong> Финансовое управление</p>
+        <p><strong>Требования:</strong> Высшее экономическое образование, знание 1С, опыт работы от 3 лет.</p>
+        <p><strong>Контакты:</strong> 8 (42339) 21-3-55, <a href="mailto:finance@fokino.org">finance@fokino.org</a></p>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+        <p>Контакты: priemnaya@mail.fokino-prim.ru | Тел: 8 (42339) 24-7-17</p>
+    </div>
+</footer>
+</body>
+</html>

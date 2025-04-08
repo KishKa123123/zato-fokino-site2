@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="styles.css"> <!-- подключаем твой CSS -->
+</head>
+<body>
+
+    <!-- ШАПКА без меню -->
+    <header>
+        <a href="Index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+    </header>
+
+    <!-- ФОРМА ВХОДА -->
+    <main>
+        <section class="auth-container">
+            <h2>Вход на сайт</h2>
+            <form action="login.php" method="post" class="auth-form">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Войти</button>
+                <p class="form-link">
+                    Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+        <p>Официальный сайт. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

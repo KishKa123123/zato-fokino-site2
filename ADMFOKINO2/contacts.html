@@ -1,0 +1,76 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрация ЗАТО Фокино</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script> -->
+</head>
+<body>
+<header>
+        <a href="index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li class="dropdown">
+                    <a href="about.php">О муниципальном образовании</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="History.php">История</a></li>
+                        <li><a href="symbol.php">Символика</a></li>
+                        <li><a href="citizens.php">Почётные граждане</a></li>
+                        <li><a href="places.php">Достопримечательности</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.php">Новости</a></li>
+                <li><a href="contacts.php">Контакты</a></li>
+                <li><a href="jobs.php">Каталог Вакансий</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<main class="container">
+    <h2 class="page-title">Контакты</h2>
+
+    <div class="contact-card contact-info">
+        <h3>Общие контакты</h3>
+        <p>Телефон: 8 (42339) 21-1-86</p>
+        <p>Email: <a href="mailto:adm@fokino.org">adm@fokino.org</a></p>
+        <p>Адрес: Приморский край, ЗАТО г. Фокино, ул. Победы, д. 12</p>
+    </div>
+
+    <div class="contact-card contact-info">
+        <h3>Приёмная главы администрации</h3>
+        <p>Телефон: 8 (42339) 21-2-13</p>
+        <p>Email: <a href="mailto:priema@fokino.org">priema@fokino.org</a></p>
+    </div>
+
+    <div class="contact-card contact-info">
+        <h3>График приёма граждан</h3>
+        <p>Понедельник – Пятница: с 9:00 до 17:00</p>
+        <p>Обед: с 12:00 до 13:00</p>
+        <p>Выходные: Суббота, Воскресенье</p>
+    </div>
+</main>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+        <p>Контакты: priemnaya@mail.fokino-prim.ru | Тел: 8 (42339) 24-7-17</p>
+    </div>
+</footer>
+</body>
+</html>

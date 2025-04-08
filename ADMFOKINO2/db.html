@@ -1,0 +1,15 @@
+
+<?php
+$host = "sql109.infinityfree.com"; // MySQL HOSTNAME
+$username = "if0_38699458";        // MySQL USERNAME
+$password = "wbjccy8014";          // MySQL PASSWORD
+$database = "if0_38699458_fokino_db"; // MySQL DATABASE NAME
+
+// Создание подключения
+$conn = new mysqli($host, $username, $password, $database);
+
+// Проверка соединения
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>

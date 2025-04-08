@@ -1,0 +1,99 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрация ЗАТО Фокино</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+        <a href="index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li class="dropdown">
+                    <a href="about.php">О муниципальном образовании</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="History.php">История</a></li>
+                        <li><a href="symbol.php">Символика</a></li>
+                        <li><a href="citizens.php">Почётные граждане</a></li>
+                        <li><a href="places.php">Достопримечательности</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.php">Новости</a></li>
+                <li><a href="contacts.php">Контакты</a></li>
+                <li><a href="jobs.php">Каталог Вакансий</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2 class="page-title">Символика</h2>
+
+        <section class="symbol">
+            <div class="symbol-text">
+                <h2 class="subtitle">Герб городского округа ЗАТО Фокино</h2>
+                <p>Герб утвержден 24 августа 2001 г. решением муниципального комитета города Фокино № 58 по результатам конкурса на лучший проект герба; внесён в Государственный геральдический регистр Российской Федерации с присвоением регистрационного номера 803. Переутвержден решением Думы городского округа ЗАТО Фокино от 28 апреля 2022 года № 550 (329-МПА).</p>
+                <p><b>Автор - Н.Н. Пыригова</b></p>
+                <p>В лазоревом поле на отвлечённом мурованном холме увенчанная часовней сквозная арка, в которой корабль под парусами; все фигуры — серебряные. В вольной части — герб Приморского края. Девиз "РОССИЙСКОМУ ФЛОТУ БЫТЬ" начертан серебряными литерами на лазоревой ленте. В основу герба ГО ЗАТО Фокино положен силуэт часовни, построенной в городе в честь празднования 300-летия Российского Флота, в память морякам, служившим на благо России. Фокино — город военных моряков, все традиции в нем связаны именно с морем. Лазоревый цвет поля — цвет моря, на берегу которого расположен город. Серебро в фигурах — символ чистоты помыслов.</p>
+            </div>
+            <div class="symbol-img">
+                <img src="flag_fokina.jpg" alt="Герб Фокино">
+            </div>
+        </section>
+        <section class="documents">
+            <div class="documents-header">
+                <h3> Документы</h3>
+                <a href="#" class="all-docs">Все документы</a>
+            </div>
+            
+            <div class="documents-slider">
+                <button class="doc-prev">&lt;</button>
+                <div class="documents-container">
+                    <div class="documents-wrapper">
+                        <div class="doc-item">
+                            <img src="pdf.png" alt="PDF">
+                            <div class="doc-info">
+                                <p class="doc-title">ЖКХ</p>
+                                <p class="doc-size">21 КБ</p>
+                            </div>
+                        </div>
+                        <div class="doc-item">
+                            <img src="pdf.png" alt="PDF">
+                            <div class="doc-info">
+                                <p class="doc-title">Жилищная сфера</p>
+                                <p class="doc-size">73 КБ</p>
+                            </div>
+                        </div>
+                        <div class="doc-item">
+                            <img src="pdf.png" alt="PDF">
+                            <div class="doc-info">
+                                <p class="doc-title">Культура</p>
+                                <p class="doc-size">28 КБ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="doc-next">&gt;</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+            <p>Контакты: priemnaya@mail.fokino-prim.ru | Тел: 8 (42339) 24-7-17</p>
+        </div>
+    </footer>
+</body>

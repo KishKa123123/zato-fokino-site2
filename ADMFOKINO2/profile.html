@@ -1,0 +1,78 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        .profile-header {
+            background-color: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .profile-header h2 {
+            margin: 0;
+        }
+
+        .profile-card {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-card p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .profile-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .profile-nav a {
+            padding: 10px 15px;
+            background-color: #005baa;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .profile-nav a:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-header">
+        <h2>Добро пожаловать, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h2>
+    </div>
+
+    <div class="profile-card">
+        <p>Вы успешно вошли в свою учётную запись.</p>
+
+        <div class="profile-nav">
+            <a href="index.php">Главная</a>
+            <a href="news.php">Новости</a>
+            <a href="contacts.php">Контакты</a>
+            <a href="jobs.php">Вакансии</a>
+            <a href="logout.php">Выйти</a>
+        </div>
+    </div>
+</body>
+</html>

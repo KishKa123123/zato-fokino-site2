@@ -1,0 +1,117 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почётные граждане</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <a href="index.php" class="logo">
+            <img src="flag_fokina.jpg" alt="Логотип ЗАТО Фокино">
+        </a>
+        <h1>Администрация городского округа ЗАТО Фокино</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li class="dropdown">
+                    <a href="about.php">О муниципальном образовании</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="History.php">История</a></li>
+                        <li><a href="symbol.php">Символика</a></li>
+                        <li><a href="citizens.php">Почётные граждане</a></li>
+                        <li><a href="places.php">Достопримечательности</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.php">Новости</a></li>
+                <li><a href="contacts.php">Контакты</a></li>
+                <li><a href="jobs.php">Каталог Вакансий</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <h2 class="citizens-title">Почётные граждане</h2>
+
+        <p>
+            Звание «Почётный гражданин города Фокино» установлено Решением муниципального комитета
+            ЗАТО город Фокино от 25 июня 1999 года № 30 «О порядке присвоения звания
+            "Почетный гражданин города Фокино"». Звание является высшей формой поощрения за заслуги
+            перед населением города.
+        </p>
+
+        <div class="honored-list">
+            <div class="honored-item">
+                <img src="no_foto.jpg" alt="Фото отсутствует">
+                <div class="honored-info">
+                    <h3>Абрамов Валентин Фёдорович</h3>
+                    <p><strong>Год рождения:</strong> 1934</p>
+                    <p><strong>Дата присвоения звания:</strong> 18.09.2008</p>
+                    <p>Решение Думы ГО ЗАТО г.Фокино №636</p>
+                </div>
+            </div>
+
+            <div class="honored-item">
+                <img src="no_foto.jpg" alt="Фото отсутствует">
+                <div class="honored-info">
+                    <h3>Асташенко Анна Яковлевна</h3>
+                    <p><strong>Год рождения:</strong> 1928</p>
+                    <p><strong>Дата присвоения звания:</strong> 29.09.2000</p>
+                    <p>Решение муниципального комитета ЗАТО г. Фокино №91</p>
+                </div>
+            </div>
+
+            <div class="honored-item">
+                <img src="no_foto.jpg" alt="Фото отсутствует">
+                <div class="honored-info">
+                    <h3>Баснина Людмила Алексеевна</h3>
+                    <p><strong>Год рождения:</strong> 1940</p>
+                    <p><strong>Дата присвоения звания:</strong> 29.09.2000</p>
+                    <p>Решение муниципального комитета ЗАТО г. Фокино №91</p>
+                </div>
+            </div>
+
+            <div class="honored-item">
+                <img src="no_foto.jpg" alt="Фото отсутствует">
+                <div class="honored-info">
+                    <h3>Сидоров Иван Петрович</h3>
+                    <p><strong>Год рождения:</strong> 1950</p>
+                    <p><strong>Дата присвоения звания:</strong> 12.10.2010</p>
+                    <p>Решение Думы ГО ЗАТО г. Фокино №700</p>
+                </div>
+            </div>
+
+            <div class="honored-item">
+                <img src="no_foto.jpg" alt="Фото отсутствует">
+                <div class="honored-info">
+                    <h3>Кузнецова Мария Ивановна</h3>
+                    <p><strong>Год рождения:</strong> 1932</p>
+                    <p><strong>Дата присвоения звания:</strong> 05.05.1998</p>
+                    <p>Решение муниципального комитета ЗАТО г. Фокино №45</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Администрация городского округа ЗАТО Фокино</p>
+            <p>Контакты: priemnaya@mail.fokino-prim.ru | Тел: 8 (42339) 24-7-17</p>
+        </div>
+    </footer>
+
+</body>
+</html>
